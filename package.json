@@ -1,0 +1,31 @@
+{
+  "name": "isomorphic-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "next": "^4.1.4",
+    "next-routes": "^1.1.0",
+    "path-match": "^1.2.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrendanJohnson/isomorphic-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrendanJohnson/isomorphic-playground/issues"
+  },
+  "homepage": "https://github.com/BrendanJohnson/isomorphic-playground#readme"
+}
