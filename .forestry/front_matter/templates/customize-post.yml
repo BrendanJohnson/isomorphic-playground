@@ -1,9 +1,0 @@
----
-hide_body: false
-fields:
-- type: text
-  name: ''
-  label: Enter quote here
-- type: field_group_list
-  name: site.menu
-  label: Menu Items
