@@ -4,18 +4,21 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "cross-env": "^5.1.1",
     "express": "^4.16.2",
     "isomorphic-fetch": "^2.2.1",
     "next": "^4.1.4",
     "next-routes": "^1.1.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "webpack-bundle-analyzer": "^2.9.1"
   },
   "devDependencies": {},
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "analyze": "cross-env ANALYZE=1 next build"
   },
   "repository": {
     "type": "git",

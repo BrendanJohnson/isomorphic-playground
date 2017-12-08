@@ -6,7 +6,6 @@ import Property from "../components/property"
 
 export default class Search extends React.Component {
 	 constructor (props) {
-	 	console.log('constructor')
       super(props);
       this.state = {
         data: [],
@@ -50,18 +49,33 @@ export default class Search extends React.Component {
 		
 		return (
 			<main>
-				<h3>Search for {tags.replace(/-/g, ', ')} in {suburb.replace(/-/g, ' ')}:</h3>
-				<section>
+				<h1>Search for {tags.replace(/-/g, ', ')} in {suburb.replace(/-/g, ' ')}:</h1>
+				<div className="container">
+					<div className="content-container">
 					{ data.length
 						? [...data, ...this.state.data].map((property, index) => <Property key={property.id} {...property} />)
 						: <div>No more properties</div> }
-				</section>
+					</div>
+				</div>
 				<Link prefetch route="search" params={{ suburb: suburb, postcode: postcode, tags: tags, page: parseInt(page, 10) + 1 }}>
 			          <a>
 			            <span>Next Page</span>
 			          </a>
 			     </Link>
-
+			     <style jsx>{`
+			     	div.container {
+			        	width: 1024px;
+					  	min-height: 550px;
+						margin: 120px auto 30px;
+						position: relative;
+						color: #000;
+			      	}
+			      	div.content-container {
+						min-height: 135px;
+						padding-top: 10px;
+						margin-bottom: 10px;
+			      	}
+			    `}</style>
 			</main>
 		)
 	}
